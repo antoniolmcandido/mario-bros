@@ -124,3 +124,25 @@ body {
         bottom: 0%
     }
 }
+
+@media (max-width: 630px) {    
+    .mario {
+        width: 75px;
+    }
+    .pipe {        
+        width: 35px;
+        animation: pipe-animation 1s infinite linear;
+    }
+    .jump {
+        animation: mario-animation 900ms ease-out;
+    }
+    #restart {
+        font-size: 25px;
+        top: 20px;
+        text-align: center;
+    }
+    #gameOver {
+        font-size: 35px;
+        text-align: center;
+    }
+}
