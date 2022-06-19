@@ -5,21 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width=device-width, inicial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
         <title>Super Mário</title>
     </head>
     <body>
-        <div class="game">
-            <img src="img/cloud.png" class="cloud">
-            <img src="img/mario.gif" class="mario">
-            <img src="img/pipe.png" class="pipe">
-            <input id="restart" type="button" value="Restart" onClick="document.location.reload(true)">
-            <div id="score">Score<strong> 0</strong></div>
-            <div id="level">Level 1</div>
-            <div id="gameOver">Game Over</div>
-            <audio id="jump" src="assets/jump.mp3" preload="auto"></audio>
-            <audio id="death" src="assets/death.mp3" preload="auto"></audio>
-            <audio id="theme" src="assets/theme.mp3" preload="auto"></audio>
+        <div class="start">
+            <img src="img/banner.jpg" class="banner">
+            <input id="start" type="button" value="Start Game" onclick="window.location.href = 'play.html'">
         </div>
-        <script src="js/script.js"></script>
     </body>
 </html>

@@ -56,6 +56,7 @@ const loopGame = setInterval(() => {
 
         mario.src = "img/over.png"
         themeSound.pause()
+        jumpSound.src = "none"
         deathSound.play()
         clearInterval(intervalScore)
 
