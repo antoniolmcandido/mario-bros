@@ -1,7 +1,12 @@
 *{
-    margin: 0;
+    margin:0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 22px;
 }
 
 .game {
@@ -11,7 +16,51 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(#87ceeb, #e0f6ff);
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+#score {
+    position: absolute;
+    top: 8rem;
+    right: 8rem;
+    font-size: 1.5em;
+    color: #282a36;
+}
+
+#gameOver {
+    display: none;
+    font-size: 70px;
+    position: absolute;
+    left: calc(50% - 181px);
+    top: calc(50% - 40px);
+    width: 362px;
+    height: 80px;
+    color: #960000;
+}
+
+#restart {
+    background: none;
+    border: none;
+    display: none;
+    font-size: 50px;
+    position: absolute;
+    left: calc(50% - 200px);
+    top: calc(50% - 200px);
+    width: 200px;
+    height: 80px;
+    color: #000000;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#restart:hover {
+    background: #960000;
+    color: #87CEEB;
+    transition: 0.5s;
+}
+
+.blockActive {
+    animation: blockAnimate 1s linear infinite;
 }
 
 .pipe {
@@ -22,7 +71,7 @@
 }
 
 .mario {
-    width: 150px;
+    width:150px;
     position: absolute;
     bottom: 0;
 }
@@ -41,23 +90,23 @@
     from {
         right: -80px;
     }
-    to {
+    to{
         right: 100%;
-    }    
+    }
 }
 
 @keyframes cloud-animation {
-    from {
+    from{
         right: -550px;
     }
-    to {
-        right: 100%;
-    }    
+    to{
+        right:  100%;
+    }
 }
 
-@keyframes mario-animation {
+@keyframes mario-animation{
     0% {
-        bottom: 0;
+        bottom:0;
     }
     40% {
         bottom: 180px;
@@ -65,13 +114,13 @@
     50% {
         bottom: 180px;
     }
-    60% {
+    60%{
         bottom: 180px;
     }
-    70% {
+    70%{
         bottom: 180px;
     }
-    100% {
-        bottom: 0;
-    }   
+    100%{
+        bottom: 0%
+    }
 }
