@@ -1,6 +1,7 @@
 const mario = document.querySelector(".mario")
 const pipe = document.querySelector(".pipe")
 const score = document.querySelector("#score")
+const level = document.querySelector("#level")
 const gameOver = document.querySelector("#gameOver")
 const restart = document.querySelector("#restart")
 const themeSound = document.querySelector("#theme")
@@ -34,6 +35,8 @@ let playerScore = 0
 const scoreCounter = () => {
     playerScore++
     score.innerHTML = `Score <b>${playerScore}</b>`
+    pipe.style.animation = "pipe-animation "+`${2-(Math.floor(playerScore/50)/5)}`+"s infinite linear"
+    level.innerHTML = "Level "+`${Math.floor(playerScore/50)+1}`
 }
 intervalScore = setInterval(scoreCounter, 300)
 
@@ -55,6 +58,8 @@ const loopGame = setInterval(() => {
         themeSound.pause()
         deathSound.play()
         clearInterval(intervalScore)
+
+        level.style.display = "none"
         gameOver.style.display = "block"
         restart.style.display = "block"
         mario.style.width = "75px"

@@ -27,6 +27,16 @@ body {
     color: #282a36;
 }
 
+#level {
+    font-size: 70px;
+    position: absolute;
+    left: calc(50% - 181px);
+    top: calc(50% - 40px);
+    width: 362px;
+    height: 80px;
+    color: #960000;
+}
+
 #gameOver {
     display: none;
     font-size: 70px;
@@ -67,7 +77,6 @@ body {
     position: absolute;
     bottom: 0;
     width: 80px;
-    animation: pipe-animation 1.5s infinite linear;
 }
 
 .mario {
@@ -139,6 +148,10 @@ body {
     #restart {
         font-size: 25px;
         top: 20px;
+        text-align: center;
+    }
+    #level {
+        font-size: 35px;
         text-align: center;
     }
     #gameOver {
